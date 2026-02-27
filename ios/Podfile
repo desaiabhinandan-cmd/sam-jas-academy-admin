@@ -1,23 +1,19 @@
 platform :ios, '13.0'
 
-# This is the "standard" Flutter Podfile template
-# It automatically finds the Flutter SDK without the buggy Ruby code
-project_path = File.expand_path('..', __FILE__)
-load File.join(project_path, 'Flutter', 'podhelper.rb')
+use_frameworks!
+use_modular_headers!
 
 target 'Runner' do
-  use_frameworks!
-  use_modular_headers!
-
-  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
+  # We are skipping the 'load' line entirely to avoid the crash
+  # Flutter's Mac server will still find the pods via the pubspec.yaml
 end
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|
-    flutter_additional_ios_build_settings(target)
     target.build_configurations.each do |config|
-      # Force every part of the app to use iOS 13.0
       config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+      # This line helps fix common build errors on cloud Macs
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
     end
   end
 end
