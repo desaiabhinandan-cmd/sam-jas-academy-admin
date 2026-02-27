@@ -1,0 +1,22 @@
+﻿# Flutter/Dart
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+
+# Android logs/temp
+**/android/app/build/
+android/app/build/
+*.hprof
+*.pyc
+*.xml
+*.flat
+
+# iOS specific
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Generated.xcconfig
+
+assets/service-account.json

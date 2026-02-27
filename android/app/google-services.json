@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "195496495487",
+    "project_id": "sam-and-jas-academy",
+    "storage_bucket": "sam-and-jas-academy.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195496495487:android:79faff702e600e2533724a",
+        "android_client_info": {
+          "package_name": "com.example.sam_jas_academy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwRB1bc0ICc9RRpmQ4VZGGtxkxQJKIkmU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
