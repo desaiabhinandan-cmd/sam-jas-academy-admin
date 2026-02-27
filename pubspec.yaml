@@ -90,7 +90,7 @@ flutter:
     - assets/images/slide3.png
     - assets/images/slide4.png
     - assets/images/logo-final-1.png
-    #- assets/service-account.json
+    - assets/service-account.json
   # --- FONTS SECTION ---
   fonts:
     - family: TrajanProCustom
