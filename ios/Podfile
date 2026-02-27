@@ -1,3 +1,14 @@
+# Add these lines at the very top
+target_local_properties = File.join(File.dirname(File.realpath(__FILE__)), '..', 'local.properties')
+if File.exists?(target_local_properties)
+  File.foreach(target_local_properties) do |line|
+    $flutter_root = line.split('=')[1].strip if line.contains?('flutter.sdk')
+  end
+end
+
+load File.join($flutter_root, 'packages', 'flutter_tools', 'bin', 'xcode_backend.rb')
+# End of added lines
+
 platform :ios, '13.0'
 
 target 'Runner' do
